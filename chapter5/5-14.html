@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Iteration Animation</title>
+        <style>
+            div{
+                width: 100px;
+                height: 150px;
+                position: relative;
+                background: blue;
+                animation-name: color;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-delay: 1s;
+            }
+            div:hover {
+                width: 400px;
+            }
+            @keyframes color {
+                0% {border: 2px dotted red; left: 0; top: 0;}
+                25% {border: 5px dashed green; left: 200px; top: 0;}
+                50% {border: 15px groove blue; left: 200px; top: 200px;}
+                75% {border: 5px inset cyan; left: 0; top: 200px;}
+                100% {border: 2px solid orange; left: 0; top: 0;}
+            }
+        </style>
+    </head>
+    <body>
+        <h1>transition-delay 속성</h1>
+        <div><p style="color: white;">Iteration Animation</p></div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3d transform</title>
+        <meta charset="utf-8">
+        <style>
+            div#trns01 {
+                width: 150px;
+                height: 80px;
+                background-color: red;
+                transform: perspective(100px) translate3d(50px, 20px, 50px)
+            }
+            div#trns02 {
+                width: 150px;
+                height: 80px;
+                background-color: green;
+                transform: perspective(200px) translate3d(50px, 20px, 0px)
+            }
+            div#trns03 {
+                width: 150px;
+                height: 80px;
+                background-color: blue;
+                transform: perspective(300px) translate3d(50px, 20px, -50px)
+            }
+            div#trns04 {
+                width: 150px;
+                height: 80px;
+                background-color: blue;
+                transform: perspective(300px) translate3d(50px, 20px, 50px)
+            }
+        </style>
+    </head>
+    <body>
+        <h1>transform3d-translate()</h1>
+        <div id="trns01">trns01</div>
+        <div id="trns02">trns02</div>
+        <div id="trns03">trns03</div>
+        <div id="trns04">trns04</div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>overflow</title>
+        <meta charset="utf-8">
+        <style>
+            #vis {overflow: visible; background: gray; width: 50%; height: 50px;}
+            #hid {overflow: hidden; background: green; width: 50%; height: 50px;}
+            #scr {overflow: scroll; background: cyan; width: 50%; height: 50px;}
+            #aut {overflow: auto; background: orange; width: 50%; height: 50px;}
+        </style>
+    </head>
+    <body>
+        <h3>overflow 속성</h3>
+        <div id="hid">
+            visible: 기본으로 설정된 속성이며 박스의 크기를 벗어난 내용이 잘리지 않고 표시된다.
+            <b>hidden: 박스의 크기를 벗어난 내용은 잘려서 보이질 않는다.</b> 
+            scroll: 박스의 크기를 벗어난 내용은 잘려서 보이지 않지만, 스크롤바를 이용하여 벗어난 내용을 볼 수 있다.
+            auto: 박스의 크기를 벗어난 내용이 있을 경우에만, 스크롤바가 생긴다.
+        </div>
+        <div id="scr">
+            visible: 기본으로 설정된 속성이며 박스의 크기를 벗어난 내용이 잘리지 않고 표시된다.
+            hidden: 박스의 크기를 벗어난 내용은 잘려서 보이질 않는다.
+            <b>scroll: 박스의 크기를 벗어난 내용은 잘려서 보이지 않지만, 스크롤바를 이용하여 벗어난 내용을 볼 수 있다.</b> 
+            auto: 박스의 크기를 벗어난 내용이 있을 경우에만, 스크롤바가 생긴다.
+        </div>
+        <div id="aut">
+            visible: 기본으로 설정된 속성이며 박스의 크기를 벗어난 내용이 잘리지 않고 표시된다.
+            hidden: 박스의 크기를 벗어난 내용은 잘려서 보이질 않는다.
+            scroll: 박스의 크기를 벗어난 내용은 잘려서 보이지 않지만, 스크롤바를 이용하여 벗어난 내용을 볼 수 있다.
+            <b>auto: 박스의 크기를 벗어난 내용이 있을 경우에만, 스크롤바가 생긴다.</b> 
+        </div>
+        <div id="vis">
+            <b>visible: 기본으로 설정된 속성이며 박스의 크기를 벗어난 내용이 잘리지 않고 표시된다.</b>
+            hidden: 박스의 크기를 벗어난 내용은 잘려서 보이질 않는다.
+            scroll: 박스의 크기를 벗어난 내용은 잘려서 보이지 않지만, 스크롤바를 이용하여 벗어난 내용을 볼 수 있다.
+            auto: 박스의 크기를 벗어난 내용이 있을 경우에만, 스크롤바가 생긴다.
+        </div>
+    </body>
+</html>

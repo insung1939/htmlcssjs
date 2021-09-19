@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            div{
+                width: 100px;
+                height: 150px;
+                background: blue;
+                animation-name: color;
+                animation-duration: 5s;
+            }
+            div:hover {
+                width: 400px;
+            }
+            @keyframes color {
+                0% {border: 2px dotted red;}
+                25% {border: 5px dashed green;}
+                50% {border: 15px groove blue;}
+                75% {border: 5px inset cyan;}
+                100% {border: 2px solid orange;}
+            }
+        </style>
+    </head>
+    <body>
+        <h1>transition-delay 속성</h1>
+        <div><p style="color: white;">마우스를 물체에 올리면 전이 효과를 볼 수 있습니다.</p></div>
+    </body>
+</html>

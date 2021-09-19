@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>위치설정: absolute</title>
+        <meta charset="utf-8">
+        <style>
+            #stc {position: sticky; width: 200px; height: 50px; background: #f0f0f0;}
+            #stt {position: static; width: 200px; height: 50px; background: #ff0000;}
+            #rlt {position: relative; width: 200px; height: 50px; background: #11ff00;}
+            #abs {position: absolute; width: 200px; height: 50px; background: #0000ff;}
+            #fxd {position: fixed; width: 200px; height: 50px; background: #00ffff;}
+        </style>
+    </head>
+    <body>
+        <h4>혼합위치설정</h4>
+        <p id="stc" style="top: 0px;">position: sticky</p>
+        <p id="stt" style="top: 50px;">position: static</p>
+        <p id="rlt" style="top: 25px; left: 50px;">position: relative</p>
+        <p id="abs" style="right: 100px;">position: absolute</p>
+        <p id="fxd" style="right: 150px;">position: fixed</p>
+    </body>
+</html>
