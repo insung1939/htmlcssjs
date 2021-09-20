@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>if조건문</title>
+        <meta charset="utf-8">
+        <script>
+            function showTime(){
+                var clock = new Date().getHours();
+                if (clock<6){
+                    alert('sleep...!')
+                    document.getElementById('msg').innerHTML='꿈나라입니다.'
+                }else if(clock<10){
+                    alert('good morning!')
+                    document.getElementById('msg').innerHTML='좋은 아침'
+                }else if(clock<13){
+                    alert('lunch time!')
+                    document.getElementById('msg').innerHTML='점심시간'
+                }else if(clock<16){
+                    alert('good afternoon!')
+                    document.getElementById('msg').innerHTML='좋은 오후'
+                }else if(clock<19){
+                    alert('good evening!')
+                    document.getElementById('msg').innerHTML='저녁시간'
+                }else{
+                    alert('take a rest!')
+                    document.getElementById('msg').innerHTML='수고했어요'
+                }
+                document.getElementById('time').innerHTML=clock+'시 입니다'
+            }
+        </script>
+    </head>
+    <body>
+        <h1>시간대별 메시지 알림</h1>
+        <button onclick="showTime()">
+            클릭 미 <p id="time"></p>
+            <p id="msg"></p>
+        </button>   
+    </body>
+</html>

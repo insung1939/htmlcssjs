@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>function 함수</title>
+        <script>
+            function jsFunction(){
+                var x,y,tot;
+                x=document.getElementById('x').value;
+                y=document.getElementById('y').value;
+                tot = parseInt(x) + parseInt(y);
+                document.getElementById('sum').value= tot;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>function 함수</h1>
+        <form name="myform">
+            첫번째 정수: 
+            <input type="text" size="10" id="x">
+            두번째 정수: 
+            <input type="text" size="1o" id="y">
+            <input type="button" onclick="jsFunction()" value="계산버튼">
+            합계: 
+            <input id="sum" size="10">
+        </form>
+    </body>
+</html>

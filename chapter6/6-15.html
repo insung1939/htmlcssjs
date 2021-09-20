@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>switch조건문</title>
+        <meta charset="utf-8">
+        <script>
+            function inputGrade(){
+                var grade = prompt("학점을 적어주세용", "A부터 F까지 입력가능합니다.")
+                switch(grade){
+                    case 'A' : 
+                        document.getElementById('output').innerHTML='A'
+                        break;
+                    case 'B' : 
+                        document.getElementById('output').innerHTML='B'
+                        break;
+                    case 'C' : 
+                        document.getElementById('output').innerHTML='C'
+                        break;
+                    case 'D' : 
+                        document.getElementById('output').innerHTML='D'
+                        break;
+                    case 'F' : 
+                        document.getElementById('output').innerHTML='F'
+                        break;
+                    default:
+                        document.getElementById('output').innerHTML='다시 입력하세요'
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>switch 조건문사용</h3>
+        <h4>학점 입력기</h4>
+        <p onclick="inputGrade()">학점입력: <b id="output">클릭하세요</b></p>
+    </body>
+</html>

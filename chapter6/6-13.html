@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>if조건문</title>
+        <meta charset="utf-8">
+        <script>
+            function showTime(){
+                var clock = new Date().getHours();
+                console.log(clock)
+                if (clock>18){
+                    alert('푹 쉬세용!')
+                }else{
+                    alert('좋은 하루 보내세용!')
+                }
+                document.getElementById('time').innerHTML=clock+'시 입니다'
+            }
+        </script>
+    </head>
+    <body>
+        <h1>시간대별 메시지 알림</h1>
+        <button onclick="showTime()">
+            클릭 미 <p id="time"></p>
+        </button>   
+    </body>
+</html>

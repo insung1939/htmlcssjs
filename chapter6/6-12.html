@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>function 함수</title>
+        <script>
+            function alertMsg(){
+                alert("hi guys my name is insung");
+            }
+            function promptMsg(){
+                prompt("what is your name??", "type ur name")
+            }
+            function confirmMsg(){
+                var result = confirm("계속하시겠습니까?");
+                if(result){
+                    alert("thank u")
+                }else{
+                    alert("plz think again")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>유용한 함수</h1>
+        <h2>버튼을 누르면 경고창이 나타납니다.</h2>
+        <input type="button" value="경고창" onclick="alertMsg()">
+        <input type="button" value="prompt" onclick="promptMsg()">
+        <input type="button" value="confirm" onclick="confirmMsg()">
+    </body>
+</html>
