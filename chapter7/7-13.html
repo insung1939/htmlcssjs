@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>숫자맞추기 게임</title>
+        <script>
+            var randomNum;
+            var clickNum = 0;
+            function findNum(){
+                var result = "";
+                var number = parseInt(document.getElementById("txt").value);
+                clickNum ++;
+                if(number === randomNum){
+                    result = '성공입니다';
+                    clickNum = 0;
+                }else if(randomNum > number){
+                    result = '값이 낮습니다.';
+                }else{
+                    result = '값이 높습니다';
+                }
+                document.getElementById("result").value = result;
+                document.getElementById("clickN").value = clickNum;
+            }
+            function randomV(){
+                randomNum = Math.random();
+                randomNum = randomNum.toFixed(2)*100;
+                randomNum = Math.ceil(randomNum);
+                document.getElementById("rnd").value = randomNum;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>숫자맞추기 게임</h2>
+        <p>컴퓨터가 발생한 0-99 랜덤숫자를 가장 적은 횟수로 맞추기</p>
+        <form>
+            컴퓨터 랜덤 숫자:
+            <input type="button" value="랜덤발생" onclick="randomV()">
+            <input type="text" id="rnd" size="3"> <br>
+            숫자입력: <input type="text" id="txt" size="3">
+            <input type="button" value="확인" onclick="findNum()"> <br>
+            힌트: <input type="text" id="result" size="16"> <br>
+            클릭 횟수:
+            <input type="text" id="clickN" size="5"> <br>
+            <input type="reset" value='다시하기'>
+        </form>
+    </body>
+</html>

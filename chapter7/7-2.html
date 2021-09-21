@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>객체생성자</title>
+    </head>
+    <body>
+        <h3>객체생성</h3>
+        <script>
+            function Human(name, age, sex, speed){
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+                this.speed =speed;
+                this.walk = function(){this.speed = 10;}
+                this.run = function(){ this.speed +=1;}
+            }
+            cmHuman = new Human("kim",13,"male",20);
+            cfHuman = new Human("Lee",13,"female",15);
+            do{
+                document.write("이름:"+cmHuman.name, "달리기: ", cmHuman.speed, "<br/>");
+                cmHuman.run();
+                document.write("이름:"+cfHuman.name, "달리기: ", cfHuman.speed, "<br/>");
+                cfHuman.run();
+            }while(cmHuman.speed < 35)
+            cmHuman.walk();
+            cfHuman.walk();
+            document.write("이름:"+cmHuman.name, "달리기: ", cmHuman.speed, "<br/>");
+            document.write("이름:"+cfHuman.name, "달리기: ", cfHuman.speed, "<br/>");
+        </script>
+    </body>
+</html>

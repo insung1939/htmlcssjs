@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>date method</title>
+    </head>
+    <body>
+        <h3>date method</h3>
+        <p>getDate: <b id="ca"></b></p>
+        <p>getDay: <b id="cca"></b></p>
+        <p>getFullYear: <b id="cnct"></b></p>
+        <p>getHours: <b id="ido"></b></p>
+        <p>getMilliseconds: <b id="fxd"></b></p>
+        <p>getMinutes: <b id="prc"></b></p>
+        <p>getSeconds: <b id="str"></b></p>
+        <p>getTime: <b id="vlf"></b></p>
+        <script>
+            var today = new Date();
+            document.getElementById("ca").innerHTML = today.getDate();
+            document.getElementById("cca").innerHTML = today.getDay();
+            document.getElementById("cnct").innerHTML = today.getFullYear();
+            document.getElementById("ido").innerHTML = today.getHours();
+            document.getElementById("fxd").innerHTML = today.getMilliseconds();
+            document.getElementById("prc").innerHTML = today.getMinutes();
+            document.getElementById("str").innerHTML = today.getSeconds();
+            document.getElementById("vlf").innerHTML = today.getTime();
+        </script>
+    </body>
+</html>

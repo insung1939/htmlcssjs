@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>로또 게임</title>
+        <script>
+            function randomV(){
+                var lottoNum = [];
+                var randomNum;
+                for(var i=0;i<6;i++){
+                    randomNum = Math.ceil(Math.random()*45);
+                    console.log(Math.ceil(Math.random()*45))
+                    lottoNum[i] = randomNum;
+                    for(var j=i;j>0;j--){
+                        if(lottoNum[i]===lottoNum[j-1]){
+                            lottoNum[i] = Math.ceil(Math.random()*45);
+                        }
+                    }
+                }
+                document.getElementById("txt").value= lottoNum
+            }
+        </script>
+    </head>
+    <body>
+        <h2 align="center">로또 게임 by insung</h2>
+        <p align="center">행운의 로또 1~45 숫자 발생기</p>
+        <form>
+            <input type="button" value="행운의 숫자" onclick="randomV()">
+            <input type="text" size="20" id="txt">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>string method2</title>
+    </head>
+    <body>
+        <h3>string method2</h3>
+        <p>match: <b id="ca"></b></p>
+        <p>search: <b id="cca"></b></p>
+        <p>slice: <b id="cnct"></b></p>
+        <p>split: <b id="ido"></b></p>
+        <p>toUpperCase: <b id="lido"></b></p>
+        <p>toString: <b id="rpl"></b></p>
+        <script>
+            var str= "welcome to js world";
+            var str2= 2915
+            var ca = str.match("js");
+            var cca = str.search("to");
+            var cnct = str.slice(8,10);
+            var ido = str.split(" ")[1];
+            var lido = str.toUpperCase();
+            var rpl = str2.toString()
+            document.getElementById("ca").innerHTML = ca;
+            document.getElementById("cca").innerHTML = cca;
+            document.getElementById("cnct").innerHTML = cnct;
+            document.getElementById("ido").innerHTML = ido;
+            document.getElementById("lido").innerHTML = lido;
+            document.getElementById("rpl").innerHTML = rpl;
+        </script>
+    </body>
+</html>

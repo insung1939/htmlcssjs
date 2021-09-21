@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>현재시간 표시</title>
+    </head>
+    <body>
+        <h3>setTimeOut()</h3>
+        <p>현재시간: <b id="ca"></b></p>
+        <script>
+            function setTime(){
+                var time = new Date();
+                var nowTime = time.getHours()+":"+time.getMinutes()+":"+time.getSeconds()+":"+time.getMilliseconds();
+                document.getElementById("ca").innerHTML = nowTime;
+                setTimeout('setTime()',1000);
+            }
+            setTime();
+        </script>
+    </body>
+</html>

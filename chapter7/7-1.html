@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>객체생성자</title>
+    </head>
+    <body>
+        <h3>객체생성</h3>
+        <script>
+            var human = {
+                name: 'kim', age: 20, sex: "male", speed: 20,
+                walk: function(){this.speed = 10;},
+                run: function(){this.speed +=1;}
+            };
+            do{
+                document.write("이름:"+human.name, "달리기: ", human.speed, "<br/>");
+                human.run();
+            }while(human.speed < 35)
+            human.walk();
+            document.write("이름:"+human.name, "달리기: ", human.speed, "<br/>");
+        </script>
+    </body>
+</html>

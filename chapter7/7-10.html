@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>math 속성</title>
+    </head>
+    <body>
+        <h3>math 속성</h3>
+        <p>abs: <b id="ca"></b></p>
+        <p>acos: <b id="cca"></b></p>
+        <p>acosh: <b id="cnct"></b></p>
+        <p>asin: <b id="ido"></b></p>
+        <p>asinh: <b id="fxd"></b></p>
+        <p>atan: <b id="prc"></b></p>
+        <p>atan2: <b id="str"></b></p>
+        <p>cbrt: <b id="vlf"></b></p>
+        <p>ceil: <b id="ceil"></b></p>
+        <script>
+            var x=-0.57, y=3;
+            document.getElementById("ca").innerHTML = Math.abs(x);
+            document.getElementById("cca").innerHTML = Math.acos(x);
+            document.getElementById("cnct").innerHTML = Math.acosh(x);
+            document.getElementById("ido").innerHTML = Math.asin(x);
+            document.getElementById("fxd").innerHTML = Math.asinh(x);
+            document.getElementById("prc").innerHTML = Math.atan(x);
+            document.getElementById("str").innerHTML = Math.atan2(x,y);
+            document.getElementById("vlf").innerHTML = Math.cbrt(x);
+            document.getElementById("ceil").innerHTML = Math.ceil(x);
+        </script>
+    </body>
+</html>
