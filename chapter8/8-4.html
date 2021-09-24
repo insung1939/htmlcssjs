@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>노드 트리</title>
+        <meta http-equiv="Content-Type"; content="text/html"; charset="utf-8">
+        <script>
+            function next(){
+                document.getElementById("next").innerHTML =
+                document.getElementById("one").nextSibling.innerHTML;
+            }
+            function previous(){
+                document.getElementById("prev").innerHTML =
+                document.getElementById("two").previousSibling.innerHTML;
+            }
+            function child(){
+                var a = document.getElementById("myList").firstElementChild.innerHTML;  
+                document.getElementById("firstC").innerHTML = a
+                console.log('a ', a);
+                document.getElementById("lastC").innerHTML =
+                document.getElementById("myList").lastChild.innerHTML;
+            }
+        </script>
+    </head>
+    <body id="main">
+        <h3 style="text-align: center;">노드 구조</h3>
+        <h4>노드 트리</h4>
+        <ul id="myList">
+            <li id="one">사과</li>
+            <li id="two">바나나</li>
+        </ul>
+        <p>사과의 nextSibling은 <b id="next"></b> 입니다</p>
+        <p>바나나의 nextSibling은 <b id="prev"></b> 입니다</p>
+        <p>리스트의 firstChild는 <b id="firstC"></b> 입니다</p>
+        <p>리스트의 lastChild는 <b id="lastC"></b> 입니다</p>
+        <input type="button" id="bt1" value="nextSibling" onclick="next()">
+        <input type="button" id="bt2" value="previousSibling" onclick="previous()">
+        <input type="button" id="bt3" value="tree" onclick="child()">
+    </body>
+</html>

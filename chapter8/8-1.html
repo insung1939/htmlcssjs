@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>요소 찾기</title>
+        <meta http-equiv="Content-Type"; content="text/html"; charset="utf-8">
+        <script>
+            function changeTag(){
+                document.getElementsByTagName("h1")[0].innerHTML =
+                ' 첫번째 h1: getElementByTagName';
+            }
+            function changeId(){
+                document.getElementById("txt").innerHTML =
+                'getElementById';
+            }
+            function changeCls(){
+                document.getElementsByClassName('cls')[0].innerHTML =
+                'getElementByClassName';
+            }
+        </script>
+    </head>
+    <body id="main">
+        <h1 style="text-align: center;">요소 찾기</h1>
+        <p id="txt">
+            <h1 class="cls" style="color: blue;">두번째 h1요소</h1>
+            <input type="button" id="bt1" value="change_title" onclick="changeTag();">
+            <input type="button" id="bt2" value="change_title" onclick="changeId();">
+            <input type="button" class="3" value="change_cs" onclick="changeCls();">
+        </p>
+    </body>
+</html>
