@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tictactoe game</title>
+        <meta charset="utf-8">
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            td{
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="resetBtn()">reset</button>
+        <script>
+            let table = document.createElement('table');
+            let row = [];
+            let col = [];
+            let turn = 'X';
+            let fullCount = 0;
+
+            function resetBtn(){
+                turn = 'X'; //초기화
+                col.forEach(function(row){
+                    row.forEach(function(td){
+                        td.textContent = '';
+                        });
+                    });
+                fullCount = 0;
+                result.textContent = '';
+            }
+            let clickEvent = function(e){
+                //console.log(e.target);
+                //console.log(e.target.parentNode);
+                //console.log(row, col)
+                let rowN = row.indexOf(e.target.parentNode);
+                //console.log('rowNumber: ', rowN);
+                let colN = col[rowN].indexOf(e.target);
+                //console.log('colNumber: ', colN);
+
+                if(col[rowN][colN].textContent !== ''){
+                    alert('다른 칸을 선택하세요');
+                }else{
+                    col[rowN][colN].textContent = turn;
+                    let bingo = false;
+                    //가로줄 검사
+                    if(col[rowN][0].textContent=== turn &&
+                    col[rowN][1].textContent=== turn &&
+                    col[rowN][2].textContent=== turn){
+                        bingo = true;
+                    }
+                    //세로줄 검사
+                    if(col[0][colN].textContent=== turn &&
+                    col[1][colN].textContent=== turn &&
+                    col[2][colN].textContent=== turn){
+                        bingo = true;
+                    }
+                    //대각선 검사
+                    if(col[1][1].textContent === turn){
+                        if(col[0][0].textContent === turn &&
+                        col[2][2].textContent === turn){
+                            bingo = true;
+                        }
+                        if(col[0][2].textContent === turn &&
+                        col[2][0].textContent === turn){
+                            bingo = true;
+                        }
+                    }
+
+                    if(bingo){
+                        result.textContent = `Winner is ${turn} !! 
+                        if you wanna play again, click the reset button!`;
+                    }else{
+                        if(turn === 'X'){
+                            turn = 'O';
+                            fullCount +=1;
+                            console.log('fullCount: ', fullCount)
+                            if(fullCount === 9){
+                                result.textContent = 'Result is tie...  if you wanna play again, click the reset button!';
+                            }
+                        }else{
+                            turn = 'X';
+                            fullCount +=1;
+                            console.log('fullCount: ', fullCount)
+                            if(fullCount === 9){
+                                result.textContent = 'Result is tie...  if you wanna play again, click the reset button!';
+                            }
+                        }
+                    }
+                   
+                }
+            }
+
+
+            for(let i=0;i<3;i++){
+                let tr = document.createElement('tr');
+                row.push(tr);
+                col.push([]);
+                for(let j=0;j<3;j++){
+                    let td = document.createElement('td');
+                    td.addEventListener('click',clickEvent);
+                    tr.appendChild(td);
+                    col[i].push(td);
+                }
+                table.appendChild(tr);
+            }
+            document.body.append(table);
+            let result = document.createElement('div');
+            document.body.append(result);
+        </script>
+    </body>
+</html>
